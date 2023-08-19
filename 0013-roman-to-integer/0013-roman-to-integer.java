@@ -11,17 +11,21 @@ class Solution {
         hm.put('M', 1000);
 
         for(int i = 0; i < s.length(); i++) {
-            char currChar = s.charAt(i), nextChar;
+            char currChar = s.charAt(i), nextChar = 'a';
 
             if(i+1 != s.length()) {
                 nextChar = s.charAt(i+1);
 
-                if(hm.get(currChar) >= hm.get(nextChar)) sum += hm.get(currChar);
-                else sum -= hm.get(currChar);
+                int currVal = hm.get(currChar);
+                int nextVal = hm.get(nextChar);
+
+                if(currVal >= nextVal) sum += currVal;
+                else sum -= currVal;
+
             } else {
-                // just add the Roman
                 sum += hm.get(currChar);
             }
+
         }
 
         return sum;
