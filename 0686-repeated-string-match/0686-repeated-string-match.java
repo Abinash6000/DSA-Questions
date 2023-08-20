@@ -1,13 +1,13 @@
 class Solution {
     public int repeatedStringMatch(String A, String B) {
         int count = 0;
-        StringBuilder sb = new StringBuilder();
-        while (sb.length() < B.length()) {
-            sb.append(A);
+        String s = "";
+        while (s.length() < B.length()) {
+            s += A;
             count++;
         }
-        if(sb.toString().contains(B)) return count;
-        if(sb.append(A).toString().contains(B)) return ++count;
+        if(s.contains(B)) return count;
+        if((s + A).contains(B)) return ++count;
         return -1;
     }
 }
