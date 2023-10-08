@@ -10,16 +10,15 @@ class Solution {
             List<Integer> level = new ArrayList<>();
             while(size > 0) {
                 TreeNode node = q.remove();
-                if (flag) {
-                    level.add(0, node.val);
-                } else {
-                    level.add(node.val);
-                }
+                level.add(node.val);
                 if(node.left != null) q.add(node.left);
                 if(node.right != null) q.add(node.right);
                 size--;
             }
             ans.add(level);
+            if(flag) {
+                Collections.reverse(level);
+            }
             flag = !flag;
         }
 
