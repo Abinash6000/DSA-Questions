@@ -36,7 +36,8 @@ class Solution {
         int mid = map.get(preorder[prIdx]);
 
         root.left = construct(preorder, inorder, inS, mid-1, prIdx + 1, map);
-        root.right = construct(preorder, inorder, mid+1, inE, prIdx + mid - inS + 1, map);
+        root.right = construct(preorder, inorder, mid+1, inE, prIdx + mid - inS + 1, map); 
+        // mid - inS == numbers on the left
 
         return root;
     }
