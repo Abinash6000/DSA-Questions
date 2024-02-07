@@ -6,12 +6,11 @@ class Solution {
     }
 
     private boolean helper(String s, Set<String> set, HashMap<String, Boolean> hm) {
-        if(set.contains(s)) return true;
+        if(s.length() == 0) return true;
         if(hm.containsKey(s)) return hm.get(s);
 
-        for(int i = 1; i<s.length(); i++) {
-            // divide the string into two parts...
-            if(helper(s.substring(0,i), set, hm) && helper(s.substring(i, s.length()), set, hm)) {
+        for(int i = 1; i<=s.length(); i++) {
+            if (set.contains(s.substring(0,i)) && helper(s.substring(i), set, hm)) {
                 hm.put(s, true);
                 return true;
             }
