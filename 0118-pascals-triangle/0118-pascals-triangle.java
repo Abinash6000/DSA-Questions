@@ -4,27 +4,19 @@ class Solution {
 
         for(int i = 0; i<numRows; i++) { // row
             List<Integer> currRow = new ArrayList<>();
+            int currEle = 1;
 
             for(int j = 0; j<=i; j++) { // col
-                int comb = combination(i, j);
-                currRow.add(comb);
+                if(j == 0) {
+                    currRow.add(currEle);
+                    continue;
+                }
+                currEle *= (i-j+1);
+                currEle /= (j);
+                currRow.add(currEle);
             }
 
             res.add(currRow);
-        }
-
-        return res;
-    }
-
-    // finding n_C_r in minimal time
-    // (row-1)_C_(col-1) // combination
-
-    private int combination(int n, int r) {
-        int res = 1;
-
-        for(int i = 0; i<r; i++) {
-            res *= n-i;
-            res /= (i+1);
         }
 
         return res;
