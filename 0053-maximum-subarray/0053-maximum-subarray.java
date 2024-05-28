@@ -1,14 +1,17 @@
+/*
+1. Kadane's Algo
+2. Brute Force✅
+3. 2 Pointer
+*/
 class Solution {
     public int maxSubArray(int[] nums) {
-        int maxSum = nums[0];
+        int max = nums[0];
         int currSum = 0;
-        for(int num : nums) {
-            if(currSum<0)
-                currSum = 0;
-            currSum += num;
-            maxSum = Math.max(currSum, maxSum);
+        for(int i = 0; i<nums.length; i++) {
+            currSum += nums[i];
+            max = Math.max(max, currSum);
+            if(currSum < 0 ) currSum = 0;
         }
-
-        return maxSum;
+        return max;
     }
 }
