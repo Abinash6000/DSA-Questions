@@ -2,7 +2,7 @@ class Solution {
     public int uniquePaths(int r, int c) {
         int dp[][] = new int[2][c];
         for(int i = 0; i<2; i++) {
-            for(int j = 0; j<n; j++) {
+            for(int j = 0; j<c; j++) {
                 if(i==0 || j==0)
                     dp[i][j] = 1;
             }
