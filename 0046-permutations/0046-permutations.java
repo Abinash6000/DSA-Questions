@@ -1,23 +1,30 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        helper(nums, new HashSet<>(), new ArrayList<>(), res);
-        return res;
+        List<List<Integer>> possPerm = new ArrayList<>();
+        solvePossPerm(nums, 0, possPerm, new ArrayList<>());
+        return possPerm;
     }
 
-    private void helper(int[] nums, HashSet<Integer> hs, List<Integer> perm, List<List<Integer>> res) {
-        if(perm.size() == nums.length) {
-            res.add(new ArrayList<>(perm));
+    private void solvePossPerm(int[] nums, int idx, List<List<Integer>> possPerm, List<Integer> currPerm) {
+        if(currPerm.size() == nums.length) {
+            possPerm.add(new ArrayList<>(currPerm));
             return;
         }
 
-        for(int i = 0; i<nums.length; i++) {
-            if(hs.contains(nums[i])) continue;
-            perm.add(nums[i]);
-            hs.add(nums[i]);
-            helper(nums, hs, perm, res);
-            perm.remove(perm.size()-1);
-            hs.remove(nums[i]);
+        for(int i = idx; i<nums.length; i++) {
+            swap(nums, idx, i); // swap
+            currPerm.add(nums[idx]); // choose
+
+            solvePossPerm(nums, idx+1, possPerm, currPerm);
+
+            currPerm.remove(currPerm.size()-1); // unchoose
+            swap(nums, idx, i); // unswap
         }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
