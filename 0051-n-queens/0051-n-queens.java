@@ -2,45 +2,57 @@ class Solution {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> boards = new ArrayList<>();
         char[][] board = new char[n][n];
-        helper(n, 0, board, boards);
+        helper(boards, board, 0);
         return boards;
     }
 
-    private boolean isSafe(int i, int j, char[][] board) {
-        int n = board.length;
-        // up
-        for(int up = 0; up<i; up++) 
-            if(board[up][j] == 'Q') return false;
-        // up left
-        for(int ith = i-1, jth = j-1; ith>=0 && jth>=0; ith--,jth--) 
-            if(board[ith][jth] == 'Q') return false;
-        // up right
-        for(int ith = i-1, jth = j+1; ith>=0 && jth<n; ith--,jth++)
-            if(board[ith][jth] == 'Q') return false;
-
-        return true;
-    }
-
-    private void helper(int n, int i, char[][] board, List<List<String>> boards) {
-        if(i == n) {
-            List<String> newBoard = new ArrayList<>();
-            for(int  k= 0; k<n; k++) {
-                String row = "";
-                for(int l = 0; l<n; l++) {
-                    row += (board[k][l] == 'Q' ? 'Q' : '.');
-                }
-                newBoard.add(row);
-            }
-            boards.add(newBoard);
+    private void helper(List<List<String>> boards, char[][] board, int col) {
+        if(col == board.length) {
+            addBoard(boards, board);
             return;
         }
 
-        for(int j = 0; j<n; j++)  {
-            if(isSafe(i, j, board)) {
-                board[i][j] = 'Q';
-                helper(n, i+1, board, boards);
-                board[i][j] = '.';
+        for(int row = 0; row<board.length; row++) {
+            if(isSafe(board, row, col)) {
+                board[row][col] = 'Q';
+                helper(boards, board, col+1);
+                board[row][col] = '.';
+            } else {
+                board[row][col] = '.';
             }
         }
+    }
+
+    private void addBoard(List<List<String>> boards, char[][] board) {
+        List<String> newBoard = new ArrayList<>();
+        for(int i = 0; i<board.length; i++) {
+            String row = "";
+            for(int j = 0; j<board.length; j++) {
+                if(board[i][j] == 'Q') {
+                    row += 'Q';
+                } else {
+                    row += '.';
+                }
+            }
+            newBoard.add(row);
+        }
+        boards.add(newBoard);
+    }
+
+    private boolean isSafe(char[][] board, int row, int col) {
+        // left
+        for(int i = row, j = col-1; j>=0; j--) {
+            if(board[i][j] == 'Q') return false;
+        }
+        // top left
+        for(int i = row-1, j = col-1; (j>=0 && i>=0); j--, i--) {
+            if(board[i][j] == 'Q') return false;
+        }
+        // bottom left
+        for(int i = row+1, j = col-1; j>=0 && i<board.length; j--, i++) {
+            if(board[i][j] == 'Q') return false;
+        }
+
+        return true;
     }
 }
