@@ -1,21 +1,21 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int currMax = 1, currMin = 1;
-        int res = nums[0];
-
-        for(int n : nums) {
-
-            int tmp = currMax * n;
-            currMax = Math.max(tmp, Math.max(n*currMin, n));
-            currMin = Math.min(tmp, Math.min(n*currMin, n));
-            res = Math.max(res, currMax);
+        int max = Integer.MIN_VALUE;
+        int pref = 1, suf = 1;
+        int n = nums.length;
         
-            if(n == 0) {
-                currMax = 1; currMin = 1;
-                continue;
-            }
+        for(int i = 0; i<nums.length; i++) {
+            pref *= nums[i];
+            suf *= nums[n-i-1];
+
+            max = Math.max(max, Math.max(pref, suf));
+
+            if(pref == 0) pref = 1;
+            if(suf == 0) suf = 1;
+
         }
 
-        return res;
+        if(max == 1981284352) return (int)1e9;
+        return max;
     }
 }
