@@ -8,17 +8,10 @@ class Solution {
         while(st <= ed) {
             mid = st + (ed-st)/2;
             if(nums[mid-1] != nums[mid] && nums[mid] != nums[mid+1]) return nums[mid];
-            else if(mid%2 != 0 ) { // odd index
-                if(nums[mid-1] == nums[mid]) // element on right
-                    st = mid+1;
-                else // element on left
-                    ed = mid-1;
-            } else { // even index
-                if(nums[mid+1] == nums[mid]) // element on right
-                    st = mid+1;
-                else // element on left
-                    ed = mid-1;
-            }
+            else if(mid%2 != 0 && nums[mid-1] == nums[mid]) // odd index, element on right
+                st = mid+1;
+            else // element on left
+                ed = mid-1;
         }
 
         return nums[mid];
