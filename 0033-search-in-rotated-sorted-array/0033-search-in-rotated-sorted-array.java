@@ -1,3 +1,5 @@
+// My Solution by checking all the cases that can be...
+
 class Solution {
     public int search(int[] nums, int target) {
         if(nums[0] == target) return 0;
