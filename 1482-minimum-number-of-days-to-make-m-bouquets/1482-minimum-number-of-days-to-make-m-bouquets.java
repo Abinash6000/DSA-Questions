@@ -12,6 +12,7 @@ class Solution {
         int st = min, ed = max, mid = -1, res = -1;
         while(st <= ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
+            System.out.println("mid: "+mid);
             if(isMidValid(bloomDay, m, k, mid)) {
                 res = mid;
                 ed = mid-1;
