@@ -3,13 +3,7 @@ class Solution {
         int n = bloomDay.length;
         if(m*k > n) return -1; // impossible to make m bouquets
 
-        int min = bloomDay[0], max = bloomDay[0];
-        for(int day : bloomDay) {
-            min = Math.min(min, day);
-            max = Math.max(max, day);
-        }
-
-        int st = min, ed = max, mid = -1, res = -1;
+        int st = 1, ed = (int)1e9, mid = -1, res = -1;
         while(st <= ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
             if(isMidValid(bloomDay, m, k, mid)) {
@@ -27,11 +21,11 @@ class Solution {
         int consecutiveFlowers = 0;
         int totalBouquets = 0;
         for(int day : bloomDay) {
-            if(totalBouquets == m) break;
             if(day <= minDays) {
                 consecutiveFlowers++;
                 if(consecutiveFlowers == k) {
                     totalBouquets++;
+                    if(totalBouquets == m) break;
                     consecutiveFlowers = 0;
                 }
             } else consecutiveFlowers = 0;
