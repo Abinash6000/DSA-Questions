@@ -12,7 +12,6 @@ class Solution {
         int st = min, ed = max, mid = -1, res = -1;
         while(st <= ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
-            System.out.println("mid: "+mid);
             if(isMidValid(bloomDay, m, k, mid)) {
                 res = mid;
                 ed = mid-1;
@@ -28,6 +27,7 @@ class Solution {
         int consecutiveFlowers = 0;
         int totalBouquets = 0;
         for(int day : bloomDay) {
+            if(totalBouquets == m) break;
             if(day <= minDays) {
                 consecutiveFlowers++;
                 if(consecutiveFlowers == k) {
@@ -37,6 +37,6 @@ class Solution {
             } else consecutiveFlowers = 0;
         }
 
-        return totalBouquets >= m;
+        return totalBouquets == m;
     }
 }
