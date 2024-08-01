@@ -4,10 +4,10 @@ class Solution {
         if ((long) m * k > bloomDay.length) return -1; // impossible to make m bouquets
 
         int st = 1, ed = (int)1e9, mid = -1;
-        while(st <= ed) {
+        while(st < ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
             if(isPossibleBouquets(bloomDay, m, k, mid)) {
-                ed = mid-1;
+                ed = mid;
             } else {
                 st = mid+1;
             }
