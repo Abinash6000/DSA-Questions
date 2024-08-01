@@ -6,7 +6,7 @@ class Solution {
         int st = 1, ed = (int)1e9, mid = -1;
         while(st <= ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
-            if(isMidValid(bloomDay, m, k, mid)) {
+            if(isPossibleBouquets(bloomDay, m, k, mid)) {
                 ed = mid-1;
             } else {
                 st = mid+1;
@@ -16,20 +16,26 @@ class Solution {
         return st;
     }
 
-    private boolean isMidValid(int[] bloomDay, int m, int k, int minDays) {
-        int consecutiveFlowers = 0;
-        int totalBouquets = 0;
-        for(int day : bloomDay) {
-            if(day <= minDays) {
-                consecutiveFlowers++;
-                if(consecutiveFlowers == k) {
-                    totalBouquets++;
-                    if(totalBouquets == m) break;
-                    consecutiveFlowers = 0;
-                }
-            } else consecutiveFlowers = 0;
+    private boolean isPossibleBouquets(int[] bloomDay, int m, int k, int day) {
+        int total = 0;
+
+        for (int i = 0; i < bloomDay.length; i++) {
+            int count = 0;
+            while (i < bloomDay.length && count < k && bloomDay[i] <= day) {
+                count++;
+                i++;
+            }
+
+            if (count == k) {
+                total++;
+                i--;
+            }
+
+            if (total >= m) {
+                return true;
+            }
         }
 
-        return totalBouquets == m;
+        return false;
     }
 }
