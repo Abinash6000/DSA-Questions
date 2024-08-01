@@ -17,7 +17,7 @@ class Solution {
         int totalDays = 0;
         int totalWeight = 0;
         for(int i = 0; i<weights.length; i++) {
-            if(weights[i] > minWeight) return false;
+            if(weights[i] > minWeight || totalDays > days) return false;
 
             totalWeight += weights[i];
 
