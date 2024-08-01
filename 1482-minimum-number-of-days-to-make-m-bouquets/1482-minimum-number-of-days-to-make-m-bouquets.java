@@ -1,20 +1,19 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
         int n = bloomDay.length;
-        if(m*k > n) return -1; // impossible to make m bouquets
+        if ((long) m * k > bloomDay.length) return -1; // impossible to make m bouquets
 
-        int st = 1, ed = (int)1e9, mid = -1, res = -1;
+        int st = 1, ed = (int)1e9, mid = -1;
         while(st <= ed) {
             mid = st + (ed - st)/2; // mid denotes the min no. of days
             if(isMidValid(bloomDay, m, k, mid)) {
-                res = mid;
                 ed = mid-1;
             } else {
                 st = mid+1;
             }
         }
 
-        return res;
+        return st;
     }
 
     private boolean isMidValid(int[] bloomDay, int m, int k, int minDays) {
