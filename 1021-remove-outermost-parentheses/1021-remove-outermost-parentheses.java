@@ -1,20 +1,20 @@
 class Solution {
     public String removeOuterParentheses(String s) {
-        int o = 0, stIdx = -1;
-        String res = "";
+        int o = 0;
+        StringBuilder res = new StringBuilder();
         for(int i = 0; i<s.length(); i++) {
-            if(o == 0) 
-                stIdx = i;
-            
-            if(s.charAt(i) == '(')
+            if(s.charAt(i) == '(') {
+                if(o != 0)
+                    res.append('(');
                 o++;
-            else 
+            }
+            else {
+                if(o != 1)
+                    res.append(')');
                 o--;
-
-            if(o == 0)
-                res = res + s.substring(stIdx+1, i);
+            }
         }
 
-        return res;
+        return res.toString();
     }
 }
