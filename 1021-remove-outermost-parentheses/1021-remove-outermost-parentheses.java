@@ -2,8 +2,8 @@ class Solution {
     public String removeOuterParentheses(String s) {
         int o = 0;
         StringBuilder res = new StringBuilder();
-        for(int i = 0; i<s.length(); i++) {
-            if(s.charAt(i) == '(') {
+        for(char c : s.toCharArray()) {
+            if(c == '(') {
                 if(o != 0)
                     res.append('(');
                 o++;
