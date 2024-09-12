@@ -1,45 +1,29 @@
 class Solution {
     public boolean exist(char[][] board, String word) {
-        if (word.length() > board[0].length*board.length)
-            return false;
-        
-        for(int i = 0; i<board.length; i++) {
-            for(int j = 0; j<board[0].length; j++) {
-                if(board[i][j] == word.charAt(0)) {
-                    board[i][j] = '.';
-                    if(exist(board, i, j, word, 1)) return true;
-                    board[i][j] = word.charAt(0);
+        for (int i = 0; i<board.length; i++) {
+            for (int j = 0; j<board[0].length; j++) {
+                if (board[i][j]==word.charAt(0)) {
+                    if (helper(board, word, i, j, board.length, board[0].length, 0)) return true;
                 }
             }
         }
-
         return false;
     }
-
-    private boolean exist(char[][] board, int i, int j, String word, int k) {
-        if(k == word.length()) return true;
-
-        if(i != 0 && board[i-1][j] == word.charAt(k)) {
-            board[i-1][j] = '.';
-            if(exist(board, i-1, j, word, k+1)) return true;
-            board[i-1][j] = word.charAt(k);
-        }
-        if(j != 0 && board[i][j-1] == word.charAt(k)) {
-            board[i][j-1] = '.';
-            if(exist(board, i, j-1, word, k+1)) return true;
-            board[i][j-1] = word.charAt(k);
-        }
-        if(i != board.length-1 && board[i+1][j] == word.charAt(k)) {
-            board[i+1][j] = '.';
-            if(exist(board, i+1, j, word, k+1)) return true;
-            board[i+1][j] = word.charAt(k);
-        }
-        if(j != board[0].length-1 && board[i][j+1] == word.charAt(k)) {
-            board[i][j+1] = '.';
-            if(exist(board, i, j+1, word, k+1)) return true;;
-            board[i][j+1] = word.charAt(k);
-        }
-
-        return false;
+    private boolean helper(char[][] board, String word, int i, int j, int m, int n, int k) {
+        if(k>=word.length()) return true;
+        if(i<0 || j<0 || i==m || j==n) return false;
+        if(board[i][j]!=word.charAt(k)) return false;
+        board[i][j]='.';
+        boolean res = false;
+        // check up
+        res = (helper(board, word, i-1, j, m, n, k+1) || res);
+        // check down
+        res = (res || helper(board, word, i+1, j, m, n, k+1));
+        // check right
+        res = (res || helper(board, word, i, j+1, m, n, k+1));
+        // check left
+        res = (res || helper(board, word, i, j-1, m, n, k+1));
+        board[i][j]=word.charAt(k);
+        return res;
     }
 }
