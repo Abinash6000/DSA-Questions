@@ -13,21 +13,21 @@ class Solution {
         if(l1 == null) return l2;
         if(l2 == null) return l1;
         if(l1.val > l2.val) {
-            ListNode tmp = l2;
+            ListNode prevL1 = l2;
             l2 = l1;
-            l1 = tmp;
+            l1 = prevL1;
         }
 
         ListNode res = l1;
-        ListNode tmp = null;
+        ListNode prevL1 = null;
 
         while(l1 != null && l2 != null) {
             while(l1 != null && l1.val <= l2.val) {
-                tmp = l1;
+                prevL1 = l1;
                 l1 = l1.next;
             }
 
-            tmp.next = l2;
+            prevL1.next = l2;
 
             // swap
             ListNode temp = l1;
