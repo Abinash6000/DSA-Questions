@@ -18,7 +18,8 @@ class Solution {
 
         // Do BFS
         while(!q.isEmpty()) {
-            int i = q.peek()[0], j = q.peek()[1], dist = q.remove()[2];
+            int[] node = q.remove();
+            int i = node[0], j = node[1], dist = node[2];
 
             int[] d = {0, 1, 0, -1, 0};
 
