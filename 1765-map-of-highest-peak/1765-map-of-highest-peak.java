@@ -20,12 +20,11 @@ class Solution {
         while(!q.isEmpty()) {
             int i = q.peek()[0], j = q.peek()[1], dist = q.remove()[2];
 
-            int[] dx = {-1, 1, 0, 0};
-            int[] dy = {0, 0, 1, -1};
+            int[] d = {0, 1, 0, -1, 0};
 
             for (int z = 0; z<4; z++) {
-                int newR = i + dx[z];
-                int newC = j + dy[z];
+                int newR = i + d[z];
+                int newC = j + d[z+1];
 
                 if(newR > -1 && newR < m &&
                 newC > -1 && newC < n &&
