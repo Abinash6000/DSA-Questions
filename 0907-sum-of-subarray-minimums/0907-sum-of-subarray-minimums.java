@@ -1,44 +1,50 @@
 class Solution {
     public int sumSubarrayMins(int[] arr) {
         int MOD = 1_000_000_007;
-        int n = arr.length;
-        long totalSum = 0;
 
-        // Arrays to store left and right contributions
-        int[] left = new int[n];
-        int[] right = new int[n];
+        return (int) sumOfSubarrayMins(arr, MOD);
+    }
 
-        // Stack for computing previous smaller elements (left boundary)
-        Stack<int[]> stack = new Stack<>();
+    private long sumOfSubarrayMins(int[] nums, int mod) {
+        long res = 0;
+        int n = nums.length;
 
-        // Compute left contributions
-        for (int i = 0; i < n; i++) {
+        Stack<Integer> st = new Stack<>();
+        int[] leftCont = new int[n], rightCont = new int[n];
+
+        // calculate left contributions
+        for(int i = 0; i<n; i++) {
+            int num = nums[i];
             int count = 1;
-            while (!stack.isEmpty() && stack.peek()[0] > arr[i]) {
-                count += stack.pop()[1]; // Accumulate count from popped elements
+
+            while(!st.isEmpty() && nums[st.peek()] >= num) {
+                st.pop();
             }
-            stack.push(new int[]{arr[i], count});
-            left[i] = count;
+
+            leftCont[i] = st.isEmpty() ? i + 1 : i - st.peek();
+            st.push(i);
         }
 
-        // Clear stack for next smaller elements (right boundary)
-        stack.clear();
+        st.clear();
 
-        // Compute right contributions
-        for (int i = n - 1; i >= 0; i--) {
+        // calculate right contributions
+        for(int i = n-1; i>=0; i--) {
+            int num = nums[i];
             int count = 1;
-            while (!stack.isEmpty() && stack.peek()[0] >= arr[i]) { // Notice ">=" for handling duplicates
-                count += stack.pop()[1];
+
+            while(!st.isEmpty() && nums[st.peek()] > num) {
+                st.pop();
             }
-            stack.push(new int[]{arr[i], count});
-            right[i] = count;
+
+            rightCont[i] = st.isEmpty() ? n - i : st.peek() - i;
+            st.push(i);
         }
 
-        // Compute final sum
-        for (int i = 0; i < n; i++) {
-            totalSum = (totalSum + (long) arr[i] * left[i] * right[i]) % MOD;
+        // calculate res
+        for(int i = 0; i<n; i++) {
+            res = (res + (long) (nums[i]*leftCont[i]*rightCont[i])) % mod;
         }
 
-        return (int) totalSum;
+        return res;
     }
 }
