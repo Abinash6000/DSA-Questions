@@ -17,7 +17,7 @@ class Solution {
             int num = nums[i];
             int count = 1;
 
-            while(!st.isEmpty() && nums[st.peek()] >= num) {
+            while(!st.isEmpty() && nums[st.peek()] > num) {
                 st.pop();
             }
 
@@ -32,7 +32,7 @@ class Solution {
             int num = nums[i];
             int count = 1;
 
-            while(!st.isEmpty() && nums[st.peek()] > num) {
+            while(!st.isEmpty() && nums[st.peek()] >= num) {
                 st.pop();
             }
 
@@ -42,7 +42,7 @@ class Solution {
 
         // calculate res
         for(int i = 0; i<n; i++) {
-            res = (res + (long) (nums[i]*leftCont[i]*rightCont[i])) % mod;
+            res = (res + ((long)nums[i]*leftCont[i]*rightCont[i])) % mod;
         }
 
         return res;
