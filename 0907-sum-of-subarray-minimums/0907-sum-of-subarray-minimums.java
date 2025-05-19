@@ -9,7 +9,7 @@ class Solution {
         long res = 0;
         int n = nums.length;
 
-        Stack<Integer> st = new Stack<>();
+        Deque<Integer> st = new ArrayDeque<>();
         int[] leftCont = new int[n], rightCont = new int[n];
 
         // calculate left contributions
