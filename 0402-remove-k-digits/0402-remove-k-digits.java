@@ -7,7 +7,6 @@ class Solution {
             if(st.isEmpty()) {
                 st.push(c);
             } else {
-                
                 while (!st.isEmpty() && st.peek() > c && k!=0) {
                     st.pop();
                     k--;
@@ -26,17 +25,15 @@ class Solution {
         // build the string
         StringBuilder sb = new StringBuilder("");
         while(!st.isEmpty()) {
-            sb.append(st.pop());
+            sb.append(st.removeLast()); // st.removeLast() makes it remove from front instead of rear/top
         }
         
         // remove trailing zeroes so that 0001000 numbers like this become 1000
-        while(sb.length() != 1 && sb.charAt(sb.length()-1) == '0') {
-            sb.deleteCharAt(sb.length()-1);
+        int i = 0;
+        while(i < sb.length() && sb.charAt(i) == '0') {
+            i++;
         }
-
-        // reverse the sb
-        sb.reverse();
         
-        return sb.toString();
+        return i == sb.length() ? "0" : sb.substring(i);
     }
 }
