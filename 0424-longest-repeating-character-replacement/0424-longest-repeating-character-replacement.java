@@ -10,13 +10,14 @@ class Solution {
             maxFq = Math.max(maxFq, hm.get(s.charAt(ed)));
 
             int changes = (ed-st+1)-maxFq; // this gives us the number of changes
-            if(changes > k) {
+            while(changes > k) {
                 hm.put(s.charAt(st), hm.get(s.charAt(st))-1);
                 maxFq = 0;
 
                 for(int fq : hm.values()) maxFq = Math.max(maxFq, fq);
 
                 st++;
+                changes = (ed-st+1)-maxFq;
             }
 
             res = Math.max(res, ed-st+1);
