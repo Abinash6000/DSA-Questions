@@ -11,6 +11,8 @@ class Solution {
             if ((end - start + 1) - maxFreq > k) {
                 freq[s.charAt(start) - 'A']--;
                 start++;
+                // there is no need to calc maxFreq again because
+                // your result won't be updated unless the current window size is valid.
             }
 
             maxLength = Math.max(maxLength, end - start + 1);
