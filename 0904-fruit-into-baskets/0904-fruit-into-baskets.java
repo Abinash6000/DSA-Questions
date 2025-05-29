@@ -7,13 +7,14 @@ class Solution {
         while(ed < fruits.length) {
             hm.put(fruits[ed], hm.getOrDefault(fruits[ed], 0) + 1);
 
-            while(hm.size() > 2) {
+            if(hm.size() <= 2) {
+                maxF = Math.max(maxF, ed-st+1);
+            } else {
                 hm.put(fruits[st], hm.get(fruits[st])-1);
                 if(hm.get(fruits[st]) == 0) hm.remove(fruits[st]);
                 st++;
             }
 
-            maxF = Math.max(maxF, ed-st+1);
             ed++;
         }
 
