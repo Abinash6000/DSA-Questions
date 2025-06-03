@@ -1,38 +1,42 @@
 class Solution {
     public String minWindow(String s, String t) {
-        char[] mp = new char[100];
-        HashSet<Character> hs = new HashSet<>();
-        String res = "";
-        int countChr = 0;
-        for(char c : t.toCharArray()) {
-            hs.add(c);
-            mp[c-'A']++;
-            if(mp[c-'A'] == 1) countChr++;
+        int[] freq = new int[128]; // Frequency map for ASCII characters
+
+        // Populate frequency map with characters from t
+        for (char c : t.toCharArray()) {
+            freq[c]++;
         }
 
-        int st = 0, ed = 0;
-        char[] sArr = s.toCharArray();
-        while(ed < s.length()) {
-            if(hs.contains(sArr[ed])) {
-                mp[sArr[ed]-'A']--;
-                if(mp[sArr[ed]-'A'] == 0)
-                    countChr--;
+        int left = 0, right = 0; // Window boundaries
+        int minLen = Integer.MAX_VALUE; // Length of the minimum window found
+        int minStart = 0; // Starting index of the minimum window
+        int required = t.length(); // Number of characters needed to form a valid window
 
-                while(countChr == 0) {
-                    if(res.length() == 0 || res.length() > (ed-st+1))
-                        res = s.substring(st, ed+1);
+        char[] chars = s.toCharArray();
 
-                    if(hs.contains(sArr[st])) {
-                        mp[sArr[st]-'A']++;
-                        if(mp[sArr[st]-'A'] == 1) countChr++;
-                    }
-                    st++;
-                }
+        // Expand the right end of the window
+        while (right < chars.length) {
+            if (freq[chars[right]]-- > 0) {
+                required--; // Needed character found
             }
 
-            ed++;
+            // Contract the window from the left as long as it's valid
+            while (required == 0) {
+                if ((right - left + 1) < minLen) {
+                    minLen = right - left + 1;
+                    minStart = left;
+                }
+
+                // Remove the leftmost character and update the frequency map
+                if (++freq[chars[left]] > 0) {
+                    required++; // A required character is now missing
+                }
+                left++;
+            }
+
+            right++;
         }
 
-        return res;
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(minStart, minStart + minLen);
     }
 }
