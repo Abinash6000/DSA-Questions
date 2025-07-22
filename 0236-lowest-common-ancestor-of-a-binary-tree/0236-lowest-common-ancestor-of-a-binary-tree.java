@@ -1,5 +1,4 @@
 class Solution {
-    TreeNode LCA;
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root == null || root.val == q.val || root.val == p.val) return root;
         TreeNode left = lowestCommonAncestor(root.left, p, q);
