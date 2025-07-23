@@ -24,7 +24,7 @@ class Solution {
                 if(pre.right == null) {
                     pre.right = curr;
                     curr = curr.left;
-                } else {
+                } else { // pre.right == curr
                     pre.right = null;
                     list.add(curr.val);
                     curr = curr.right;
