@@ -2,6 +2,7 @@ class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
         int n = grid.length;
         if (grid[0][0] == 1 || grid[n-1][n-1] == 1) return -1;
+        if(n == 1 && grid[0][0] == 0) return 1;
 
         Queue<int[]> q = new LinkedList<>();
         q.add(new int[]{0, 0});
@@ -14,8 +15,6 @@ class Solution {
             int[] cell = q.remove();
             int x = cell[0], y = cell[1];
             int dist = grid[x][y];
-
-            if (x == n-1 && y == n-1) return dist; // reached target
 
             for (int k = 0; k < 8; k++) {
                 int nx = x + dx[k], ny = y + dy[k];
