@@ -22,6 +22,8 @@ class Solution {
                 if (nx < 0 || ny < 0 || nx >= n || ny >= n) continue;
                 if (grid[nx][ny] != 0) continue; // blocked or already visited
 
+                if(nx == n-1 && ny == n-1) return dist+1;
+                
                 grid[nx][ny] = dist + 1; // mark distance & visited
                 q.add(new int[]{nx, ny});
             }
