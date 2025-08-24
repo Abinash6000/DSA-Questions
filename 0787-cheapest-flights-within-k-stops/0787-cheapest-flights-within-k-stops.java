@@ -1,36 +1,30 @@
 class Solution {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-        List<List<List<Integer>>> adjList = new ArrayList<>(); 
-        for(int i = 0; i<n; i++) 
-            adjList.add(new ArrayList<>());
-        for(int i = 0; i<flights.length; i++) 
-            adjList.get(flights[i][0]).add(Arrays.asList(flights[i][1], flights[i][2]));
-            // storing dst, cost
+        List<List<int[]>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) adj.add(new ArrayList<>());
+        for (int[] f : flights) adj.get(f[0]).add(new int[]{f[1], f[2]});
 
-        // Distance array to store the updated distances from the source. 
-        int[] dist = new int[n]; 
-        for(int i = 0;i<n;i++) {
-            dist[i] = (int)(1e9); 
-        }
-        dist[src] = 0; 
+        int[][] dist = new int[n][k+2]; 
+        for (int[] d : dist) Arrays.fill(d, (int)1e9);
+        dist[src][0] = 0;
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> a[2]-b[2]); 
-        pq.add(new int[]{src, 0, 0}); // node, dist(sort), k
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> a[1]-b[1]);
+        pq.add(new int[]{src, 0, 0}); // node, cost, stops
 
-        while(!pq.isEmpty()) {
-            int[] node = pq.remove();
+        while (!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int node = cur[0], cost = cur[1], stops = cur[2];
+            if (node == dst) return cost;
+            if (stops > k) continue;
 
-            if(node[2] > k) continue;
-
-            for(List<Integer> adj : adjList.get(node[0])) {
-                if (node[1] + adj.get(1) < dist[adj.get(0)]) {
-                    dist[adj.get(0)] = node[1] + adj.get(1);
-                    pq.add(new int[]{adj.get(0), node[1]+adj.get(1), node[2]+1});
+            for (int[] e : adj.get(node)) {
+                int nei = e[0], price = e[1];
+                if (cost + price < dist[nei][stops+1]) {
+                    dist[nei][stops+1] = cost + price;
+                    pq.add(new int[]{nei, cost+price, stops+1});
                 }
             }
         }
-
-        if(dist[dst] == (int)(1e9)) return -1; 
-        return dist[dst]; 
+        return -1;
     }
 }
