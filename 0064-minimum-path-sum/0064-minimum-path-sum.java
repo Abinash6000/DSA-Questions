@@ -1,22 +1,21 @@
 class Solution {
-    public int minPathSum(int[][] grid) {
-	int m = grid.length;// row
-	int n = grid[0].length; // column
-	for (int i = 0; i < m; i++) {
-		for (int j = 0; j < n; j++) {
-			if (i == 0 && j != 0) {
-				grid[i][j] = grid[i][j] + grid[i][j - 1];
-			} else if (i != 0 && j == 0) {
-				grid[i][j] = grid[i][j] + grid[i - 1][j];
-			} else if (i == 0 && j == 0) {
-				grid[i][j] = grid[i][j];
-			} else {
-				grid[i][j] = Math.min(grid[i][j - 1], grid[i - 1][j])
-						+ grid[i][j];
-			}
-		}
-	}
+    int[][] memo;
 
-	return grid[m - 1][n - 1];
-}
+    public int minPathSum(int[][] grid) {
+        memo = new int[grid.length][grid[0].length];
+        for (int[] row : memo) 
+            Arrays.fill(row, -1);  // mark unvisited
+        return solve(grid, 0, 0);
+    }
+
+    private int solve(int[][] grid, int i, int j) {
+        if (i == grid.length || j == grid[0].length) return Integer.MAX_VALUE;
+        if (i == grid.length-1 && j == grid[0].length-1) return grid[i][j];
+        if (memo[i][j] != -1) return memo[i][j];
+
+        int right = solve(grid, i, j+1);
+        int down  = solve(grid, i+1, j);
+
+        return memo[i][j] = grid[i][j] + Math.min(right, down);
+    }
 }
