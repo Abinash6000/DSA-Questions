@@ -1,37 +1,31 @@
 class Solution {
     public List<List<String>> partition(String s) {
-        // Backtracking
-        // Edge case
-        if(s == null || s.length() == 0) return new ArrayList<>();
-        
-        List<List<String>> result = new ArrayList<>();
-        helper(s, new ArrayList<>(), result);
-        return result;
+        List<List<String>> res = new ArrayList<>();
+        helper(s, new ArrayList<>(), res);
+        return res;
     }
-    public void helper(String s, List<String> step, List<List<String>> result) {
-        // Base case
-        if(s == null || s.length() == 0) {
-            result.add(new ArrayList<>(step));
+
+    private void helper(String s, List<String> currPart, List<List<String>> res) {
+        if(s.length() == 0) {
+            res.add(new ArrayList<>(currPart));
             return;
         }
-        for(int i = 1; i <= s.length(); i++) {
+
+        for(int i = 1; i<=s.length(); i++) {
             String temp = s.substring(0, i);
-            if(!isPalindrome(temp)) continue; // only do backtracking when current string is palindrome
-            
-            step.add(temp);  // choose
-            helper(s.substring(i, s.length()), step, result); // explore
-            step.remove(step.size() - 1); // unchoose
+            if(!isPalindrome(temp)) continue;
+            currPart.add(temp); // choose
+            helper(s.substring(i, s.length()), currPart, res); // explore
+            currPart.remove(currPart.size()-1); // unchoose
         }
-        return;
     }
-    public boolean isPalindrome(String s) {
-        int left = 0, right = s.length() - 1;
-        while(left <= right) {
-            if(s.charAt(left) != s.charAt(right))
-                return false;
-            left ++;
-            right --;
+
+    private boolean isPalindrome(String s) {
+        int st = 0, ed = s.length()-1;
+        while(st<ed) {
+            if(s.charAt(st++) != s.charAt(ed--)) return false;
         }
+
         return true;
     }
 }
