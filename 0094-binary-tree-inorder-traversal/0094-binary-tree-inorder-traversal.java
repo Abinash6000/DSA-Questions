@@ -22,10 +22,10 @@ class Solution {
                     pre = pre.right;
 
                 if(pre.right == null) {
-                    pre.right = curr;
+                    pre.right = curr; // create the thread
                     curr = curr.left;
                 } else { // pre.right == curr
-                    pre.right = null;
+                    pre.right = null; // remove the thread
                     list.add(curr.val);
                     curr = curr.right;
                 }
