@@ -1,36 +1,22 @@
 class Solution {
-    public int minDistance(String w1, String w2) {
-        int[][] dp = new int[w1.length()+1][w2.length()+1];
-        // initialization
-        for(int i = 0; i<= w1.length(); i++) dp[i][0] = i;
-        for(int j = 0; j<= w2.length(); j++) dp[0][j] = j;
-
-        for(int i = 1; i<= w1.length(); i++) {
-            for(int j = 1; j<= w2.length(); j++) {
-                if(w1.charAt(i-1) == w2.charAt(j-1)) dp[i][j] = dp[i-1][j-1];
-                else {
-                    int ins = 1 + dp[i][j-1];
-                    int del = 1 + dp[i-1][j];
-                    int rep = 1 + dp[i-1][j-1];
-                    dp[i][j] = Math.min(ins, Math.min(del, rep));
-                }
-            }
-        }
-
-        return dp[w1.length()][w2.length()];
+    public int minDistance(String word1, String word2) {
+        int[][] memo = new int[word1.length()+1][word2.length()+1];
+        int lcs = lcs(word1, word2, 0, 0, memo);
+        return lcs;
     }
 
-    // private int editDis(String w1, String w2, int i, int j, Integer[][] memo) {
-    //     if(j == w2.length()) return (w1.length() - i);
-    //     if(i == w1.length()) return (w2.length() - j);
-    //     if(memo[i][j] != null) return memo[i][j];
+    private int lcs(String s1, String s2, int i, int j, int[][] memo) {
+        if(i == s1.length())
+            return s2.length()-j;
+        if(j == s2.length())
+            return s1.length()-i;
+        if(memo[i][j] != 0)
+            return memo[i][j];
 
-    //     if(w1.charAt(i) == w2.charAt(j)) return memo[i][j] = editDis(w1, w2, i+1, j+1, memo);
-    //     else {
-    //         int ins = 1 + editDis(w1, w2, i, j+1, memo);
-    //         int del = 1 + editDis(w1, w2, i+1, j, memo);
-    //         int rep = 1 + editDis(w1, w2, i+1, j+1, memo);
-    //         return memo[i][j] = Math.min(ins, Math.min(del, rep));
-    //     }
-    // }
+        if(s1.charAt(i) == s2.charAt(j)) {
+            return memo[i][j] = lcs(s1, s2, i+1, j+1, memo);
+        }
+
+        return memo[i][j] = 1 + Math.min(lcs(s1, s2, i+1, j, memo), Math.min(lcs(s1, s2, i, j+1, memo), lcs(s1, s2, i+1, j+1, memo)));
+    }
 }
