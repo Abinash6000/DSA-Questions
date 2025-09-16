@@ -1,23 +1,13 @@
 class Solution {
-    // We use Integer instead of int as it supports a null value.
-    private Integer prev;
-
     public boolean isValidBST(TreeNode root) {
-        prev = null;
-        return inorder(root);
+        return validateBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
+    
+    private boolean validateBST(TreeNode root, long min, long max) {
+        if(root == null) return true;
+        if(root.val <= min || root.val >= max) return false;
 
-    private boolean inorder(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
-        if (!inorder(root.left)) {
-            return false;
-        }
-        if (prev != null && root.val <= prev) {
-            return false;
-        }
-        prev = root.val;
-        return inorder(root.right);
+        return validateBST(root.left, min, root.val) && 
+                validateBST(root.right, root.val, max);
     }
 }
