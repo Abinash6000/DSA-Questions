@@ -1,9 +1,9 @@
 class Solution {
     public int trap(int[] height) {
         Stack<Integer> st = new Stack<>(); // store indices of leftBound and Bottom
-        int maxWat = 0, i = 0, n = height.length;
+        int maxWat = 0, i = 0;
 
-        while(i < n) {
+        while(i < height.length) {
             if(st.isEmpty() || height[i] <= height[st.peek()]) {
                 st.push(i++);
 
