@@ -1,28 +1,21 @@
 class Solution {
     public int trap(int[] height) {
-        Stack<Integer> st = new Stack<>(); // store indices of leftBound and Bottom
-        int maxWat = 0, i = 0;
+        int l =  0, r = height.length-1;
+        int leftMax = height[l], rightMax = height[r];
+        int water = 0;
 
-        while(i < height.length) {
-            if(st.isEmpty() || height[i] <= height[st.peek()]) {
-                st.push(i++);
-
-            } else { // we encountered a right boundry
-                int rightBoun = i; // rightBoundary
-                int bot = st.pop(); // bottom
-
-                if(!st.isEmpty()) {
-                    int leftBoun = st.peek(); // leftBoundary
-
-                    int waterHei = st.isEmpty() ? 0 :
-                        (Math.min(height[rightBoun], height[leftBoun]) - height[bot]); // water height
-                    int waterWei = rightBoun - leftBoun - 1; // water width
-
-                    maxWat += waterHei * waterWei;
-                }
+        while(l<r) {
+            if(leftMax < rightMax) {
+                l += 1;
+                leftMax = Math.max(leftMax, height[l]);
+                water += leftMax - height[l];
+            } else {
+                r -= 1;
+                rightMax = Math.max(rightMax, height[r]);
+                water += rightMax - height[r];
             }
         }
 
-        return maxWat;
+        return water;
     }
 }
