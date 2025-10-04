@@ -1,19 +1,28 @@
 class Solution {
-    public int trap(int[] A) {
-        if (A==null) return 0;
-        Stack<Integer> s = new Stack<Integer>();
-        int i = 0, maxWater = 0, maxBotWater = 0;
-        while (i < A.length){
-            if (s.isEmpty() || A[i]<=A[s.peek()]){
-                s.push(i++);
-            }
-            else {
-                int bot = s.pop();
-                maxBotWater = s.isEmpty()? // empty means no il
-                0:(Math.min(A[s.peek()],A[i])-A[bot])*(i-s.peek()-1);
-                maxWater += maxBotWater;
+    public int trap(int[] height) {
+        Stack<Integer> st = new Stack<>(); // store indices of leftBound and Bottom
+        int maxWat = 0, i = 0, n = height.length;
+
+        while(i < n) {
+            if(st.isEmpty() || height[i] <= height[st.peek()]) {
+                st.push(i++);
+
+            } else { // we encountered a right boundry
+                int rightBoun = i; // rightBoundary
+                int bot = st.pop(); // bottom
+
+                if(!st.isEmpty()) {
+                    int leftBoun = st.peek(); // leftBoundary
+
+                    int waterHei = st.isEmpty() ? 0 :
+                        (Math.min(height[rightBoun], height[leftBoun]) - height[bot]); // water height
+                    int waterWei = rightBoun - leftBoun - 1; // water width
+
+                    maxWat += waterHei * waterWei;
+                }
             }
         }
-        return maxWater;
+
+        return maxWat;
     }
 }
