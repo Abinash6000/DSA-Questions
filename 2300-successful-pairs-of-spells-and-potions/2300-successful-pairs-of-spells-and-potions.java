@@ -2,7 +2,6 @@ class Solution {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         Arrays.sort(potions);
         int n = spells.length;
-        int[] res = new int[n];
 
         for(int i = 0; i<n; i++) {
             int st = 0, ed = potions.length-1;
@@ -19,10 +18,10 @@ class Solution {
                 }
             }
 
-            res[i] = potions.length-ed-1;
+            spells[i] = potions.length-ed-1;
         }
 
-        return res;
+        return spells;
     }
 
     private boolean isSuccess(long suc , long spell, long potion) {
