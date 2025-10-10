@@ -8,7 +8,8 @@ class Solution {
                 suffArr[i] = energy[i] + suffArr[i+k];
             } else 
                 suffArr[i] = energy[i];
-            max = Math.max(max, suffArr[i]);
+            
+            if(max < suffArr[i]) max = suffArr[i];
         }
 
         return max;
