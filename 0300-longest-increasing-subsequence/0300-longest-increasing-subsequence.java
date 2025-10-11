@@ -1,33 +1,20 @@
 class Solution {
-    int[][] memo;
-
     public int lengthOfLIS(int[] nums) {
         int n = nums.length;
-        memo = new int[n + 1][n];
-        for (int[] row : memo) {
-            Arrays.fill(row, -1);
-        }
-        return helper(nums, -1, 0);
-    }
+        int[] dp = new int[n];
+        Arrays.fill(dp, 1);  // every element is an LIS of length 1 by itself
 
-    private int helper(int[] nums, int prev_i, int i) {
-        // base case: reached end
-        if (i == nums.length) return 0;
+        int maxLen = 1;
 
-        // check memo
-        if (memo[prev_i + 1][i] != -1) return memo[prev_i + 1][i];
-
-        // option 1: skip current element
-        int notTake = helper(nums, prev_i, i + 1);
-
-        // option 2: take current element (if valid)
-        int take = 0;
-        if (prev_i == -1 || nums[i] > nums[prev_i]) {
-            take = 1 + helper(nums, i, i + 1);
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            maxLen = Math.max(maxLen, dp[i]);
         }
 
-        // store result
-        memo[prev_i + 1][i] = Math.max(take, notTake);
-        return memo[prev_i + 1][i];
+        return maxLen;
     }
 }
