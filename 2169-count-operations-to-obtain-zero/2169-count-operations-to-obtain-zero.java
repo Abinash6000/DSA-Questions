@@ -1,11 +1,15 @@
 class Solution {
-    public int countOperations(int nums1, int nums2) {
-        if(nums1 == 0 || nums2 == 0) 
-            return 0;
-
-        if(nums1 > nums2)
-            return 1 + countOperations(nums1-nums2, nums2);
-        else
-            return 1 + countOperations(nums1, nums2-nums1);
+    public int countOperations(int num1, int num2) {
+        int operations = 0;
+        while (num1 > 0 && num2 > 0) {
+            operations++;
+            if (num1 >= num2) {
+                num1 -= num2;
+            }
+            else {
+                num2 -= num1;
+            }
+        }
+        return operations;
     }
 }
