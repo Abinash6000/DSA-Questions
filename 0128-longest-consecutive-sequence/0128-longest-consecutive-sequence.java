@@ -4,8 +4,8 @@ class Solution {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int n : num) {
             if (!map.containsKey(n)) {
-                int left = (map.containsKey(n - 1)) ? map.get(n - 1) : 0;
-                int right = (map.containsKey(n + 1)) ? map.get(n + 1) : 0;
+                int left = map.getOrDefault(n - 1, 0);
+                int right = map.getOrDefault(n + 1, 0);
                 // sum: length of the sequence n is in
                 int sum = left + right + 1;
                 map.put(n, sum);
