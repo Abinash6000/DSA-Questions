@@ -1,12 +1,25 @@
 class Solution {
-        public long maxRunTime(int n, int[] A) {
-        Arrays.sort(A);
-        long sum = 0;
-        for (int a: A)
-            sum += a;
-        int k = 0, na = A.length;
-        while (A[na - 1 - k] > sum / (n - k))
-            sum -= A[na - 1 - k++];
-        return sum / (n - k);
+    public long maxRunTime(int n, int[] batteries) {
+        long total = 0;
+        for (int b : batteries) total += b;
+
+        long left = 0;
+        long right = total / n; // max possible runtime
+
+        while (left < right) {
+            long mid = (left + right + 1) / 2;
+            long usable = 0;
+
+            for (int b : batteries) {
+                usable += Math.min((long)b, mid);
+            }
+
+            if (usable >= mid * n) {
+                left = mid;   // feasible, try higher
+            } else {
+                right = mid - 1; // not feasible
+            }
+        }
+        return left;
     }
 }
