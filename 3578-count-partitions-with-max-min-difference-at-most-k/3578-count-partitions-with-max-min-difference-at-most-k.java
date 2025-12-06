@@ -5,17 +5,33 @@ class Solution {
         long mod = (long) 1e9 + 7;
         long[] dp = new long[n + 1];
         long[] prefix = new long[n + 1];
-        TreeMap<Integer, Integer> cnt = new TreeMap<>();
+        Deque<Integer> minQ = new LinkedList<>();
+        Deque<Integer> maxQ = new LinkedList<>();
 
         dp[0] = 1;
         prefix[0] = 1;
         for (int i = 0, j = 0; i < n; i++) {
-            cnt.put(nums[i], cnt.getOrDefault(nums[i], 0) + 1);
+            // maintain the maximum value queue
+            while (!maxQ.isEmpty() && nums[maxQ.peekLast()] <= nums[i]) {
+                maxQ.pollLast();
+            }
+            maxQ.offerLast(i);
+            // maintain the minimum value queue
+            while (!minQ.isEmpty() && nums[minQ.peekLast()] >= nums[i]) {
+                minQ.pollLast();
+            }
+            minQ.offerLast(i);
             // adjust window
-            while (j <= i && cnt.lastKey() - cnt.firstKey() > k) {
-                cnt.put(nums[j], cnt.get(nums[j]) - 1);
-                if (cnt.get(nums[j]) == 0) {
-                    cnt.remove(nums[j]);
+            while (
+                !maxQ.isEmpty() &&
+                !minQ.isEmpty() &&
+                nums[maxQ.peekFirst()] - nums[minQ.peekFirst()] > k
+            ) {
+                if (maxQ.peekFirst() == j) {
+                    maxQ.pollFirst();
+                }
+                if (minQ.peekFirst() == j) {
+                    minQ.pollFirst();
                 }
                 j++;
             }
