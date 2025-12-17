@@ -1,36 +1,38 @@
 class Solution {
-   static public long maximumProfit(int[] prices, int k) {
-        long ans = 0;
+    public static long maximumProfit(int[] prices, int k) {
         int n = prices.length;
-        Long[][][] dp = new Long[n][k + 1][3];
-        long res = solve(0, k, 0, n, prices, dp);
-        return res;
-    }
+        long[][][] dp = new long[n + 1][k + 1][3];
 
-    static long solve(int i, int k, int decider, int n, int[] prices, Long[][][] dp) {
-        if (i == n) {
-            if (k >= 0 && decider == 0)
-                return 0;
-            return Integer.MIN_VALUE;
+        for (int K = 0; K <= k; K++) {
+            dp[n][K][0] = 0; 
+            dp[n][K][1] = Integer.MIN_VALUE;
+            dp[n][K][2] = Integer.MIN_VALUE;
         }
 
-        if (dp[i][k][decider] != null) {
-            return dp[i][k][decider];
-        }
+        for (int i = n - 1; i >= 0; i--) {
+            for (int K = 0; K <= k; K++) {
+                for (int decider = 0; decider < 3; decider++) {
+                    long take = Integer.MIN_VALUE;
+                    long dontTake = dp[i + 1][K][decider];
 
-        long take = Integer.MIN_VALUE, dontTake = Integer.MIN_VALUE;
-        if (k > 0) {
-            if (decider == 1) { 
-                take = prices[i] + solve(i + 1, k - 1, 0, n, prices, dp);
-            } else if (decider == 2) { 
-                take = -prices[i] + solve(i + 1, k - 1, 0, n, prices, dp);
-            } else {
-                take = Math.max(prices[i] + solve(i + 1, k, 2, n, prices, dp),
-                        -prices[i] + solve(i + 1, k, 1, n, prices, dp));
+                    if (K > 0) {
+                        if (decider == 1) {
+                            take = prices[i] + dp[i + 1][K - 1][0];
+                        } else if (decider == 2) {
+                            take = -prices[i] + dp[i + 1][K - 1][0];
+                        } else {
+                            take = Math.max(
+                                prices[i] + dp[i + 1][K][2],
+                                -prices[i] + dp[i + 1][K][1]
+                            );
+                        }
+                    }
+
+                    dp[i][K][decider] = Math.max(take, dontTake);
+                }
             }
         }
 
-        dontTake = solve(i + 1, k, decider, n, prices, dp);
-        return dp[i][k][decider] = Math.max(take, dontTake);
+        return dp[0][k][0];
     }
 }
