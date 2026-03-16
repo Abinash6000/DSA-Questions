@@ -1,56 +1,52 @@
 class Solution {
+    private int first = -1;
+    private int second = -1;
+    private int third = -1;
     public int[] getBiggestThree(int[][] grid) {
         int m = grid.length, n = grid[0].length;
-        TreeSet<Integer> ts = new TreeSet<>((a,b) -> Integer.compare(b,a));
-
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                ts.add(grid[i][j]);
-                
-                for(int size = 1; size <= Math.min(m,n); size++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                add(grid[i][j]);
+            }
+        }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 1;
+                     i - k >= 0 && i + k < m && j - k >= 0 && j + k < n;
+                     k++) {
                     int sum = 0;
-                    boolean valid = true;
+                    for (int d = 0; d < k; d++)
+                        sum += grid[i - k + d][j + d];
+                    for (int d = 0; d < k; d++)
+                        sum += grid[i + d][j + k - d];
+                    for (int d = 0; d < k; d++)
+                        sum += grid[i + k - d][j - d];
+                    for (int d = 0; d < k; d++)
+                        sum += grid[i - d][j - k + d];
 
-                    int x1 = i, y1 = j, x2 = i, y2 = j;
-                    int dir1 = -1, dir2 = 1;
-                    int temp = 0;
-
-                    while(temp <= 2*size) {
-                        if(Math.min(x1, x2) < 0 || Math.max(x1, x2) >= m || Math.min(y1, y2) < 0 || Math.max(y1, y2) >= n) {
-                            valid = false;
-                            break;
-                        }
-
-                        if(x1 == x2 && y1 == y2) {
-                            sum += grid[x1][y1];
-                        } else {
-                            sum += grid[x1][y1];
-                            sum += grid[x2][y2];
-                        }
-
-                        if(temp == size) {
-                            dir2 = dir2*dir1;
-                            dir1 = dir2*dir1;
-                        }
-
-                        x1--; x2--; 
-                        y1 += dir1;
-                        y2 += dir2;
-                        temp++;
-                    }
-
-                    if(valid)
-                        ts.add(sum);
+                    add(sum);
                 }
             }
         }
-
-        List<Integer> lst = new ArrayList<>();
-        while(!ts.isEmpty() && lst.size() < 3) {
-            lst.add(ts.getFirst());
-            ts.removeFirst();
+        if (second == -1) return new int[]{first};
+        if (third == -1) return new int[]{first, second};
+        return new int[]{first, second, third};
+    }
+    private void add(int val) {
+        if (val == first || val == second || val == third) return;
+        if (val > first) {
+            third = second;
+            second = first;
+            first = val;
+        } 
+        else if (val > second) 
+        {
+            third = second;
+            second = val;
+        } 
+        else if (val > third) 
+        {
+            third = val;
         }
-
-        return lst.stream().mapToInt(Integer::intValue).toArray();
     }
 }
