@@ -1,19 +1,18 @@
 class Solution {
-
-    public boolean checkStrings(String s1, String s2) {
-        if (s1.length() != s2.length()) {
-            return false;
-        }
-
-        int[] count1 = new int[255];
-        int[] count2 = new int[255];
-
+public:
+    bool checkStrings(string s1, string s2) {
+        array<string, 2> A, B;
         for (int i = 0; i < s1.length(); i++) {
-            int offset = (i & 1) << 7;
-            count1[offset + s1.charAt(i)]++;
-            count2[offset + s2.charAt(i)]++;
+            int off = i & 1;
+            A[off] += s1[i];
+            B[off] += s2[i];
         }
 
-        return Arrays.equals(count1, count2);
+        for (int i = 0; i < 2; i++) {
+            sort(A[i].begin(), A[i].end());
+            sort(B[i].begin(), B[i].end());
+        }
+
+        return A == B;
     }
-}
+};
