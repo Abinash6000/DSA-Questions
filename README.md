@@ -7,6 +7,7 @@
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
+| [2078-two-furthest-houses-with-different-colors](https://github.com/Abinash6000/DSA-Questions/tree/main/2078-two-furthest-houses-with-different-colors/) | Easy |
 | [2751-robot-collisions](https://github.com/Abinash6000/DSA-Questions/tree/main/2751-robot-collisions/) | Hard |
 | [3070-count-submatrices-with-top-left-element-and-sum-less-than-k](https://github.com/Abinash6000/DSA-Questions/tree/main/3070-count-submatrices-with-top-left-element-and-sum-less-than-k/) | Medium |
 | [3212-count-submatrices-with-equal-frequency-of-x-and-y](https://github.com/Abinash6000/DSA-Questions/tree/main/3212-count-submatrices-with-equal-frequency-of-x-and-y/) | Medium |
@@ -35,6 +36,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
+| [2078-two-furthest-houses-with-different-colors](https://github.com/Abinash6000/DSA-Questions/tree/main/2078-two-furthest-houses-with-different-colors/) | Easy |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/Abinash6000/DSA-Questions/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3474-lexicographically-smallest-generated-string](https://github.com/Abinash6000/DSA-Questions/tree/main/3474-lexicographically-smallest-generated-string/) | Hard |
 | [3600-maximize-spanning-tree-stability-with-upgrades](https://github.com/Abinash6000/DSA-Questions/tree/main/3600-maximize-spanning-tree-stability-with-upgrades/) | Hard |
