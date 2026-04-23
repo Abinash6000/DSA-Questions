@@ -8,6 +8,7 @@
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [2078-two-furthest-houses-with-different-colors](https://github.com/Abinash6000/DSA-Questions/tree/main/2078-two-furthest-houses-with-different-colors/) | Easy |
+| [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/Abinash6000/DSA-Questions/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [2751-robot-collisions](https://github.com/Abinash6000/DSA-Questions/tree/main/2751-robot-collisions/) | Hard |
@@ -91,6 +92,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
+| [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [3070-count-submatrices-with-top-left-element-and-sum-less-than-k](https://github.com/Abinash6000/DSA-Questions/tree/main/3070-count-submatrices-with-top-left-element-and-sum-less-than-k/) | Medium |
 | [3212-count-submatrices-with-equal-frequency-of-x-and-y](https://github.com/Abinash6000/DSA-Questions/tree/main/3212-count-submatrices-with-equal-frequency-of-x-and-y/) | Medium |
@@ -105,6 +107,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
+| [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 | [3488-closest-equal-element-queries](https://github.com/Abinash6000/DSA-Questions/tree/main/3488-closest-equal-element-queries/) | Medium |
