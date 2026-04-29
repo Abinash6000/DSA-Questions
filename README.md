@@ -14,6 +14,7 @@
 | [2751-robot-collisions](https://github.com/Abinash6000/DSA-Questions/tree/main/2751-robot-collisions/) | Hard |
 | [3070-count-submatrices-with-top-left-element-and-sum-less-than-k](https://github.com/Abinash6000/DSA-Questions/tree/main/3070-count-submatrices-with-top-left-element-and-sum-less-than-k/) | Medium |
 | [3212-count-submatrices-with-equal-frequency-of-x-and-y](https://github.com/Abinash6000/DSA-Questions/tree/main/3212-count-submatrices-with-equal-frequency-of-x-and-y/) | Medium |
+| [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/Abinash6000/DSA-Questions/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3488-closest-equal-element-queries](https://github.com/Abinash6000/DSA-Questions/tree/main/3488-closest-equal-element-queries/) | Medium |
@@ -86,6 +87,7 @@
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [3070-count-submatrices-with-top-left-element-and-sum-less-than-k](https://github.com/Abinash6000/DSA-Questions/tree/main/3070-count-submatrices-with-top-left-element-and-sum-less-than-k/) | Medium |
 | [3212-count-submatrices-with-equal-frequency-of-x-and-y](https://github.com/Abinash6000/DSA-Questions/tree/main/3212-count-submatrices-with-equal-frequency-of-x-and-y/) | Medium |
+| [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Abinash6000/DSA-Questions/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
@@ -97,6 +99,7 @@
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [3070-count-submatrices-with-top-left-element-and-sum-less-than-k](https://github.com/Abinash6000/DSA-Questions/tree/main/3070-count-submatrices-with-top-left-element-and-sum-less-than-k/) | Medium |
 | [3212-count-submatrices-with-equal-frequency-of-x-and-y](https://github.com/Abinash6000/DSA-Questions/tree/main/3212-count-submatrices-with-equal-frequency-of-x-and-y/) | Medium |
+| [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3546-equal-sum-grid-partition-i](https://github.com/Abinash6000/DSA-Questions/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
 ## Enumeration
@@ -133,6 +136,7 @@
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/Abinash6000/DSA-Questions/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
 ## Union-Find
