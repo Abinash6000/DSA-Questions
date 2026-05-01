@@ -4,6 +4,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
@@ -26,6 +27,7 @@
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [1622-fancy-sequence](https://github.com/Abinash6000/DSA-Questions/tree/main/1622-fancy-sequence/) | Hard |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/Abinash6000/DSA-Questions/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
@@ -138,6 +140,7 @@
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/Abinash6000/DSA-Questions/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
