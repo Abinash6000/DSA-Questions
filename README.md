@@ -165,4 +165,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2833-furthest-point-from-origin](https://github.com/Abinash6000/DSA-Questions/tree/main/2833-furthest-point-from-origin/) | Easy |
+## Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0061-rotate-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0061-rotate-list/) | Medium |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0061-rotate-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0061-rotate-list/) | Medium |
 <!---LeetCode Topics End-->
