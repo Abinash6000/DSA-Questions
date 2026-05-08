@@ -21,6 +21,7 @@
 | [3488-closest-equal-element-queries](https://github.com/Abinash6000/DSA-Questions/tree/main/3488-closest-equal-element-queries/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Abinash6000/DSA-Questions/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
+| [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/Abinash6000/DSA-Questions/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
 | [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3742-maximum-path-score-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
@@ -31,6 +32,7 @@
 | [1622-fancy-sequence](https://github.com/Abinash6000/DSA-Questions/tree/main/1622-fancy-sequence/) | Hard |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/Abinash6000/DSA-Questions/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
+| [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 | [3783-mirror-distance-of-an-integer](https://github.com/Abinash6000/DSA-Questions/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
 ## Binary Search
 | Problem Name | Difficulty |
@@ -120,6 +122,7 @@
 | [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 | [3488-closest-equal-element-queries](https://github.com/Abinash6000/DSA-Questions/tree/main/3488-closest-equal-element-queries/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
+| [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 | [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 ## String Matching
 | Problem Name | Difficulty |
@@ -173,4 +176,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0061-rotate-list/) | Medium |
+## Breadth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
+## Number Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 <!---LeetCode Topics End-->
