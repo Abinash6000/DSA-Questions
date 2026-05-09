@@ -23,6 +23,7 @@
 | [3546-equal-sum-grid-partition-i](https://github.com/Abinash6000/DSA-Questions/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
 | [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/Abinash6000/DSA-Questions/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
+| [3660-jump-game-ix](https://github.com/Abinash6000/DSA-Questions/tree/main/3660-jump-game-ix/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/Abinash6000/DSA-Questions/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
 | [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3742-maximum-path-score-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
@@ -149,6 +150,7 @@
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
+| [3660-jump-game-ix](https://github.com/Abinash6000/DSA-Questions/tree/main/3660-jump-game-ix/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/Abinash6000/DSA-Questions/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
 | [3742-maximum-path-score-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 ## Union-Find
