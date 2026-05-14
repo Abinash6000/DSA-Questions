@@ -1,13 +1,20 @@
 class Solution {
 
     public boolean isGood(int[] nums) {
-        Arrays.sort(nums);
-        int n = nums.length - 1;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] != i + 1) {
+        int n = nums.length;
+        int[] count = new int[n];
+        for (int a : nums) {
+            if (a >= n) {
                 return false;
             }
+            if (a < n - 1 && count[a] > 0) {
+                return false;
+            }
+            if (a == n - 1 && count[a] > 1) {
+                return false;
+            }
+            count[a]++;
         }
-        return nums[n] == n;
+        return true;
     }
 }
