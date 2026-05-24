@@ -9,6 +9,7 @@
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [1306-jump-game-iii](https://github.com/Abinash6000/DSA-Questions/tree/main/1306-jump-game-iii/) | Medium |
+| [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Abinash6000/DSA-Questions/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
@@ -90,6 +91,7 @@
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Abinash6000/DSA-Questions/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
@@ -159,6 +161,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
+| [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
 | [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3660-jump-game-ix](https://github.com/Abinash6000/DSA-Questions/tree/main/3660-jump-game-ix/) | Medium |
