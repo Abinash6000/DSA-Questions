@@ -70,6 +70,7 @@
 | ------- | ------- |
 | [0657-robot-return-to-origin](https://github.com/Abinash6000/DSA-Questions/tree/main/0657-robot-return-to-origin/) | Easy |
 | [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/Abinash6000/DSA-Questions/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
+| [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 | [2075-decode-the-slanted-ciphertext](https://github.com/Abinash6000/DSA-Questions/tree/main/2075-decode-the-slanted-ciphertext/) | Medium |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/Abinash6000/DSA-Questions/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2833-furthest-point-from-origin](https://github.com/Abinash6000/DSA-Questions/tree/main/2833-furthest-point-from-origin/) | Easy |
@@ -115,6 +116,7 @@
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
@@ -162,6 +164,7 @@
 | ------- | ------- |
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
+| [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 | [3225-maximum-score-from-grid-operations](https://github.com/Abinash6000/DSA-Questions/tree/main/3225-maximum-score-from-grid-operations/) | Hard |
 | [3418-maximum-amount-of-money-robot-can-earn](https://github.com/Abinash6000/DSA-Questions/tree/main/3418-maximum-amount-of-money-robot-can-earn/) | Medium |
 | [3660-jump-game-ix](https://github.com/Abinash6000/DSA-Questions/tree/main/3660-jump-game-ix/) | Medium |
@@ -208,4 +211,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1306-jump-game-iii](https://github.com/Abinash6000/DSA-Questions/tree/main/1306-jump-game-iii/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 <!---LeetCode Topics End-->
