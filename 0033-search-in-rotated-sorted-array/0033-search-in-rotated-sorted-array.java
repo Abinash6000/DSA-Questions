@@ -1,30 +1,23 @@
-// My Solution by checking all the cases that can be...
+// Striver Solution (the right way)
+// knowing atleast one side of the mid will be fully sorted
+// if the target is in the sorted side, move towards that or away from that if not there...
 
 class Solution {
     public int search(int[] nums, int target) {
-        if(nums[0] == target) return 0;
         int st = 0, ed = nums.length-1, mid;
         while(st <= ed) {
             mid = st + (ed-st)/2;
-
             if(nums[mid] == target) return mid;
-            else if(nums[mid] > nums[0] && target > nums[0]) {
-                if(target > nums[mid]) {
-                    st = mid+1;
-                } else if(target < nums[mid]) {
+            else if(nums[st] <= nums[mid]) // left side is sorted
+                if(target >= nums[st] && target < nums[mid]) // target is on left side
                     ed = mid-1;
-                }
-            } else if(nums[mid] < nums[0] && target < nums[0]) {
-                if(target > nums[mid]) {
+                else // target is on right side
                     st = mid+1;
-                } else if(target < nums[mid]) {
+            else // right side is sorted
+                if(target <= nums[ed] && target > nums[mid]) // target is on right side
+                    st = mid+1;
+                else // target is on left side
                     ed = mid-1;
-                }
-            } else if(nums[mid] < nums[0] && target > nums[0]) {
-                ed = mid-1;
-            } else if(nums[mid] > nums[0] && target < nums[0]) {
-                st = mid+1;
-            } else if(nums[mid] == nums[0]) st = mid+1;
         }
 
         return -1;
