@@ -17,6 +17,7 @@
 | [1914-cyclically-rotating-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
 | [2078-two-furthest-houses-with-different-colors](https://github.com/Abinash6000/DSA-Questions/tree/main/2078-two-furthest-houses-with-different-colors/) | Easy |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
+| [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/Abinash6000/DSA-Questions/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [2751-robot-collisions](https://github.com/Abinash6000/DSA-Questions/tree/main/2751-robot-collisions/) | Hard |
@@ -142,6 +143,7 @@
 | ------- | ------- |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
+| [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
 | [2784-check-if-array-is-good](https://github.com/Abinash6000/DSA-Questions/tree/main/2784-check-if-array-is-good/) | Easy |
 | [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
@@ -224,4 +226,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
+## Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
+## Binary Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
 <!---LeetCode Topics End-->
