@@ -17,6 +17,7 @@
 | [1914-cyclically-rotating-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
 | [2078-two-furthest-houses-with-different-colors](https://github.com/Abinash6000/DSA-Questions/tree/main/2078-two-furthest-houses-with-different-colors/) | Easy |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
+| [2161-partition-array-according-to-given-pivot](https://github.com/Abinash6000/DSA-Questions/tree/main/2161-partition-array-according-to-given-pivot/) | Medium |
 | [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/Abinash6000/DSA-Questions/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2615-sum-of-distances](https://github.com/Abinash6000/DSA-Questions/tree/main/2615-sum-of-distances/) | Medium |
@@ -168,6 +169,7 @@
 | [1914-cyclically-rotating-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
 | [2069-walking-robot-simulation-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/2069-walking-robot-simulation-ii/) | Medium |
 | [2075-decode-the-slanted-ciphertext](https://github.com/Abinash6000/DSA-Questions/tree/main/2075-decode-the-slanted-ciphertext/) | Medium |
+| [2161-partition-array-according-to-given-pivot](https://github.com/Abinash6000/DSA-Questions/tree/main/2161-partition-array-according-to-given-pivot/) | Medium |
 | [2751-robot-collisions](https://github.com/Abinash6000/DSA-Questions/tree/main/2751-robot-collisions/) | Hard |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -209,6 +211,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0061-rotate-list/) | Medium |
+| [2161-partition-array-according-to-given-pivot](https://github.com/Abinash6000/DSA-Questions/tree/main/2161-partition-array-according-to-given-pivot/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
