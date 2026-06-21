@@ -9,6 +9,7 @@
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Abinash6000/DSA-Questions/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0217-contains-duplicate](https://github.com/Abinash6000/DSA-Questions/tree/main/0217-contains-duplicate/) | Easy |
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [1306-jump-game-iii](https://github.com/Abinash6000/DSA-Questions/tree/main/1306-jump-game-iii/) | Medium |
@@ -102,6 +103,7 @@
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0217-contains-duplicate](https://github.com/Abinash6000/DSA-Questions/tree/main/0217-contains-duplicate/) | Easy |
 | [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Abinash6000/DSA-Questions/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Abinash6000/DSA-Questions/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
@@ -145,6 +147,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0001-two-sum/) | Easy |
+| [0217-contains-duplicate](https://github.com/Abinash6000/DSA-Questions/tree/main/0217-contains-duplicate/) | Easy |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
 | [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
