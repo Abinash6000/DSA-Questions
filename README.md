@@ -217,6 +217,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0061-rotate-list/) | Medium |
+| [0206-reverse-linked-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0206-reverse-linked-list/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -248,4 +249,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2196-create-binary-tree-from-descriptions](https://github.com/Abinash6000/DSA-Questions/tree/main/2196-create-binary-tree-from-descriptions/) | Medium |
+## Recursion
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0206-reverse-linked-list](https://github.com/Abinash6000/DSA-Questions/tree/main/0206-reverse-linked-list/) | Easy |
 <!---LeetCode Topics End-->
