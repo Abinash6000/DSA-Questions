@@ -9,6 +9,7 @@
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Abinash6000/DSA-Questions/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0209-minimum-size-subarray-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0217-contains-duplicate](https://github.com/Abinash6000/DSA-Questions/tree/main/0217-contains-duplicate/) | Easy |
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/Abinash6000/DSA-Questions/tree/main/0874-walking-robot-simulation/) | Medium |
@@ -57,6 +58,7 @@
 | [0033-search-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0209-minimum-size-subarray-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/Abinash6000/DSA-Questions/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3488-closest-equal-element-queries](https://github.com/Abinash6000/DSA-Questions/tree/main/3488-closest-equal-element-queries/) | Medium |
 | [3600-maximize-spanning-tree-stability-with-upgrades](https://github.com/Abinash6000/DSA-Questions/tree/main/3600-maximize-spanning-tree-stability-with-upgrades/) | Hard |
@@ -128,6 +130,7 @@
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/Abinash6000/DSA-Questions/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [2121-intervals-between-identical-elements](https://github.com/Abinash6000/DSA-Questions/tree/main/2121-intervals-between-identical-elements/) | Medium |
@@ -235,6 +238,7 @@
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
