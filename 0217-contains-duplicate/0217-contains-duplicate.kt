@@ -3,8 +3,7 @@ class Solution {
         val hash = mutableSetOf<Int>()
 
         for(num in nums) {
-            if(hash.contains(num)) return true
-            hash.add(num)
+            if(!hash.add(num)) return true
         }
 
         return false
