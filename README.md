@@ -7,6 +7,7 @@
 | [0001-two-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0001-two-sum/) | Easy |
 | [0033-search-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Abinash6000/DSA-Questions/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
+| [0152-maximum-product-subarray](https://github.com/Abinash6000/DSA-Questions/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Abinash6000/DSA-Questions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Abinash6000/DSA-Questions/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0209-minimum-size-subarray-sum](https://github.com/Abinash6000/DSA-Questions/tree/main/0209-minimum-size-subarray-sum/) | Medium |
@@ -186,6 +187,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Abinash6000/DSA-Questions/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
+| [0152-maximum-product-subarray](https://github.com/Abinash6000/DSA-Questions/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0396-rotate-function](https://github.com/Abinash6000/DSA-Questions/tree/main/0396-rotate-function/) | Medium |
 | [1340-jump-game-v](https://github.com/Abinash6000/DSA-Questions/tree/main/1340-jump-game-v/) | Hard |
 | [1871-jump-game-vii](https://github.com/Abinash6000/DSA-Questions/tree/main/1871-jump-game-vii/) | Medium |
